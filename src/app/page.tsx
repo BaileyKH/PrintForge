@@ -1,4 +1,5 @@
-
+import Image from "next/image";
+import heroImg from '/public/home-page-hero.png'
 
 export default function Home() {
   return (
@@ -25,7 +26,13 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <img src="/home-page-hero.png" width={350} />
+        <Image 
+          src={heroImg} 
+          alt="home page hero image"
+          width={628} 
+          height={672}
+          className="w-[350px] h-auto rounded-lg"
+        />
       </section>
     </main>
   );

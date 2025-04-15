@@ -1,4 +1,6 @@
+import Image from 'next/image'
 
+import heroImage from '/public/hero-image-square.png'
 
 export default function About() {
     return(
@@ -10,17 +12,24 @@ export default function About() {
 
                 <div className="grid items-center gap-8 mb-12 md:grid-cols-2">
                     <div className="relative h-[300px] w-full">
-                        <img
-                            src="/hero-image-square.png"
+
+                        <Image
+                            src={heroImage}
                             alt="PrintForge Community - A group of makers collaborating on 3D printing projects"
-                            width="350"
+                            width={742}
+                            height={742}
+                            className="absolute inset-0 w-full h-full object-cover rounded-lg"
                         />
+                        
                     </div>
                     <div>
-                        <p className="mb-4 text-sm text-gray-600 uppercase" aria-hidden="true">
+                        <p
+                            className="mb-4 text-sm text-gray-600 uppercase"
+                            aria-hidden="true"
+                        >
                             About PrintForge
                         </p>
-                        <h2 className="mb-4 text-2xl font-semibold">
+                        <h2 className="mb-4 text-2xl font-semibold font-montserrat-alternates">
                             Empowering Makers Worldwide
                         </h2>
                         <p className="mb-4 text-gray-700">
@@ -42,10 +51,12 @@ export default function About() {
 
             <section className="py-12" aria-labelledby="key-features">
                 <div className="px-6 mx-auto max-w-7xl">
-                    <h2 id="key-features" className="sr-only">Key Features</h2>
+                    <h2 id="key-features" className="sr-only">
+                        Key Features
+                    </h2>
                     <div className="grid gap-6 md:gap-0 md:grid-cols-3">
                         <article className="p-6 bg-white">
-                            <h3 className="mb-3 text-xl font-semibold">
+                            <h3 className="mb-3 text-xl font-semibold font-montserrat-alternates">
                                 100K+ Models
                             </h3>
                             <p className="text-gray-600">
@@ -55,7 +66,7 @@ export default function About() {
                             </p>
                         </article>
                         <article className="p-6 bg-white border-gray-400 md:border-x">
-                            <h3 className="mb-3 text-xl font-semibold">
+                            <h3 className="mb-3 text-xl font-semibold font-montserrat-alternates">
                                 Active Community
                             </h3>
                             <p className="text-gray-600">
@@ -64,7 +75,7 @@ export default function About() {
                             </p>
                         </article>
                         <article className="p-6 bg-white">
-                            <h3 className="mb-3 text-xl font-semibold">
+                            <h3 className="mb-3 text-xl font-semibold font-montserrat-alternates">
                                 Free to Use
                             </h3>
                             <p className="text-gray-600">
